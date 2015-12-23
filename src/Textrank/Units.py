@@ -2,13 +2,14 @@ import sys
 
 class EmailUnit(object):
 
-  def __init__(self, owner, sender, recipient, subject, text, processed):
+  def __init__(self, owner, sender, recipient, subject, text, processed, keywords):
     self.owner = owner
     self.sender = sender
     self.recipient = recipient
     self.subject = subject
     self.text = text
     self.processed = processed
+    self.keywords = keywords
 
   def __str__(self):
     return 'Owner: {0}, To: {1}, From: {2}'.format(self.owner, self.recipient, self.sender)

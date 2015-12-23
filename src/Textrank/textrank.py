@@ -48,14 +48,18 @@ def textrank_keyword(text):
     split_text = list(textcleaner.tokenize_by_word(txt))
     
     # If only one token then we return that with a score of 1.0
+    if len(tokens) == 0: return {}
     if len(tokens) == 1: return { tokens.keys()[0] : 1.0 }
-    
     # Creates the graph and adds the edges
+    # if len(tokens) == 2: print tokens, split_text
+
     graph = commons.build_graph(keywords._get_words_for_graph(tokens))
     keywords._set_graph_edges(graph, tokens, split_text)
     del split_text # It's no longer used
     commons.remove_unreachable_nodes(graph)
 
+    if len(graph.nodes()) == 0:
+        return {}
     # # Ranks the tokens using the PageRank algorithm. Returns dict of lemma -> score
     pagerank_scores = keywords._pagerank_word(graph)
     extracted_lemmas = keywords._extract_tokens(graph.nodes(), pagerank_scores, 0.2, None)

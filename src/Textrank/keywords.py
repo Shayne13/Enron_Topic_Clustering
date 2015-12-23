@@ -7,7 +7,7 @@ from textcleaner import tokenize_by_word as _tokenize_by_word
 from commons import build_graph as _build_graph
 from commons import remove_unreachable_nodes as _remove_unreachable_nodes
 
-WINDOW_SIZE = 5
+WINDOW_SIZE = 4
 
 """Check tags in http://www.clips.ua.ac.be/pages/mbsp-tags and use only first two letters
 Example: filter for nouns and adjectives:

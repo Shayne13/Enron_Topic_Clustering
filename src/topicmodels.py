@@ -19,80 +19,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 # from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 
 
-# Pass in 'mnf', 'lda' or 'lsa' as the modelType, the features X,
-# the feature names and the number of desired components.
-# For example: topicModel('mnf', X_tfidf, X_featureNames, 100)
-def dimensionalityReduction(modelType, X, nComponents):
-    
-    if modelType == 'mnf':
-        model = NMF(n_components=nComponents, init='random', random_state=0)
-    elif modelType == 'lda':
-        model = LatentDirichletAllocation(n_topics=nComponents)
-    elif modelType == 'lsa':
-        model = TruncatedSVD(n_components=nComponents)
-        
-    return model.fit(X)
-
-# Pass in 'ms', 'spectral' or 'affinity' as the modelType, the features X
-# and it will return the models prescribed labels, cluster centers and
-# number of clusters
-def clusterEmails(modelType, X, nClusters=100):
-    
-    if modelType == 'ms':
-        ms = MeanShift().fit(X)
-        return ms.labels_, ms.cluster_centers_, len(ms.cluster_centers_)
-    elif modelType == 'sp':
-        symmetricMat = cosine_similarity(X[0:X.shape[0]], X)
-        labels = spectral_clustering(symmetricMat, n_clusters=nClusters)
-        return labels, None, nClusters
-    elif modelType == 'af':
-        af = AffinityPropagation().fit(X)
-        return  af.labels_, af.cluster_centers_, len(af.cluster_centers_)
-
-    print 'Invalid modelType argument'
-    return None
-
-# Print out the top words for the topic model:
-def print_top_words(modelName, model, feature_names, n_top_words):
-	numComponents = model.components_.shape[0]
-	print '*************************************************'
-	print 'TOPIC MODEL: ' + modelName + ' with %d components' % numComponents
-	print '*************************************************'
-	for topic_idx, topic in enumerate(model.components_):
-		print(("Topic %d:   " % topic_idx) + " ".join([feature_names[i] for i in topic.argsort()[:-n_top_words - 1:-1]]))
-		print
-	print
-
-# Prints out the cluster model distribution and keywords:
-def print_cluster_info(specs, labels, numClusters, emails):
-    print '*********************************************'
-    print 'TOPIC CLUSTER: ' + specs + ":  - generated %d clusters -" % numClusters
-    print '*********************************************'
-    distribution = getClusterDistribution(labels)
-    print 'Cluster Distribution: '
-    print sorted(distribution.values(), reverse=True)
-    for cluster in range(numClusters):
-    	print getClusterKeywords(emails, labels, cluster, distribution)
-    	print
-    print
-
-# Extracts the most frequent Textrank keywords from the emails with the given
-# cluster label. These words essentially give meaning or a human understandable
-# "label" to the cluster. 
-def getClusterKeywords(emails, labels, cluster, distribution):
-    keywordFrequency = Counter()
-    indexes = [ i for i, l in enumerate(labels) if l == cluster ]
-    for index in indexes:
-        keywordFrequency.update(emails[index].keywords)
-    return ("Cluster %d: (%d emails)  \t" % (cluster, distribution[cluster])) + " ".join([ str(k[0]) for k in keywordFrequency.most_common(10) ])
-
-# Returns a mapping from cluster index to number of emails in that cluster.
-def getClusterDistribution(labels):
-	distribution = defaultdict(int)
-	for l in labels:
-		distribution[l] += 1
-	return distribution
-
 def dr_stage(abbrev, X_tfidf, featureNames):
 	dr_models = {}
 
@@ -193,6 +119,81 @@ def lsa_model(X_tfidf, featureNames):
 	timing.finish()
 	return x_lsa
 
+# Pass in 'mnf', 'lda' or 'lsa' as the modelType, the features X,
+# the feature names and the number of desired components.
+# For example: topicModel('mnf', X_tfidf, X_featureNames, 100)
+def dimensionalityReduction(modelType, X, nComponents):
+    
+    if modelType == 'mnf':
+        model = NMF(n_components=nComponents, init='random', random_state=0)
+    elif modelType == 'lda':
+        model = LatentDirichletAllocation(n_topics=nComponents)
+    elif modelType == 'lsa':
+        model = TruncatedSVD(n_components=nComponents)
+        
+    return model.fit(X)
+
+
+# Pass in 'ms', 'spectral' or 'affinity' as the modelType, the features X
+# and it will return the models prescribed labels, cluster centers and
+# number of clusters
+def clusterEmails(modelType, X, nClusters=100):
+    
+    if modelType == 'ms':
+        ms = MeanShift().fit(X)
+        return ms.labels_, ms.cluster_centers_, len(ms.cluster_centers_)
+    elif modelType == 'sp':
+        symmetricMat = cosine_similarity(X[0:X.shape[0]], X)
+        labels = spectral_clustering(symmetricMat, n_clusters=nClusters)
+        return labels, None, nClusters
+    elif modelType == 'af':
+        af = AffinityPropagation().fit(X)
+        return  af.labels_, af.cluster_centers_, len(af.cluster_centers_)
+
+    print 'Invalid modelType argument'
+    return None
+
+# Print out the top words for the topic model:
+def print_top_words(modelName, model, feature_names, n_top_words):
+	numComponents = model.components_.shape[0]
+	print '*************************************************'
+	print 'TOPIC MODEL: ' + modelName + ' with %d components' % numComponents
+	print '*************************************************'
+	for topic_idx, topic in enumerate(model.components_):
+		print(("Topic %d:   " % topic_idx) + " ".join([feature_names[i] for i in topic.argsort()[:-n_top_words - 1:-1]]))
+		print
+	print
+
+# Prints out the cluster model distribution and keywords:
+def print_cluster_info(specs, labels, numClusters, emails):
+    print '*********************************************'
+    print 'TOPIC CLUSTER: ' + specs + ":  - generated %d clusters -" % numClusters
+    print '*********************************************'
+    distribution = getClusterDistribution(labels)
+    print 'Cluster Distribution: '
+    print sorted(distribution.values(), reverse=True)
+    for cluster in range(numClusters):
+    	print getClusterKeywords(emails, labels, cluster, distribution)
+    	print
+    print
+
+# Extracts the most frequent Textrank keywords from the emails with the given
+# cluster label. These words essentially give meaning or a human understandable
+# "label" to the cluster. 
+def getClusterKeywords(emails, labels, cluster, distribution):
+    keywordFrequency = Counter()
+    indexes = [ i for i, l in enumerate(labels) if l == cluster ]
+    for index in indexes:
+        keywordFrequency.update(emails[index].keywords)
+    return ("Cluster %d: (%d emails)  \t" % (cluster, distribution[cluster])) + " ".join([ str(k[0]) for k in keywordFrequency.most_common(10) ])
+
+# Returns a mapping from cluster index to number of emails in that cluster.
+def getClusterDistribution(labels):
+	distribution = defaultdict(int)
+	for l in labels:
+		distribution[l] += 1
+	return distribution
+
 ################################################################################
 # Module command-line behavior #
 ################################################################################
@@ -207,6 +208,7 @@ if __name__ == '__main__':
     emails = pickler.load('Data/emails.txt')
     featureNames = pickler.load('Data/feature_labels.txt')
     X_tfidf = pickler.load('Data/X_tfidf.matrix')
+    print X_tfidf.shape
 
     timer.markEvent('Loaded email feature data')
 

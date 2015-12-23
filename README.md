@@ -2,13 +2,14 @@
 # Author: Shayne Longpre
 # Description: 
 
-	Topic Modelling of the Enron email dataset (1/2 million messages) using Non-Negative Matrix Factorization (NMF), 
+	Topic Modelling of the Enron dataset (520,901 emails) using Non-Negative Matrix Factorization (NMF), 
 	Latent Dirichlet Allocation (LDA) and Latent Semantic Analysis (LSA). The dimensionality reduction techniques
 	are applied to the TF-IDF processed emails. Topic Clustering is conducted on the dimensionality reduced matrices,
 	using Mean Shift (MS), Affinity Propogation (AF) and Spectral Clustering (SP). MS and AF generate the number of
-	clusters based on the data, rather than optimizing for a given number.
+	clusters based on the data, rather than optimizing for a given number. The cluster centroids are annotated by
+	the most frequently occurring TextRank keywords from the member emails.
 
-# Dataset: 
+## Dataset: 
 
 	Download at: https://www.cs.cmu.edu/~./enron/enron_mail_20150507.tgz
 	More information at: https://www.cs.cmu.edu/~./enron/
@@ -28,4 +29,34 @@
 	src/Textrank - Used to compute textrank_keyword scores for emails
 	src/parser.py - Run 'python src/parser.py Data/Raw' to generate emails.txt, feature_labels.txt and x_tfidf.matrix
 	src/topicmodels.py -
-		Run 'python '
+		Run `python src/topicmodels <dr_model> <cluster_model>`.
+			where <dr_model> must be one of 'MNF', 'LDA', 'LSA' or 'ALL'.
+			where <cluster_model> must be one of 'MS', 'SP', 'AF' or 'ALL'.
+		EG: Running 'python src/topicmodels MNF MS' will print topics for MNF and then clustering topics for MNF MS.
+		EG: Running 'python src/topicmodels ALL ALL' will print topics for all dimensionality reduction models (3) as 
+			well as cluster topics for all combinations (9).
+
+## Pipeline:
+
+### (1) Parsing:
+	
+	- Emails are processed and converted to EmailUnits, extracting the owner, sender, recipient and subject.
+	- The email body is filtered for stopwords, punctuation, numerics and other commonly occurring unuseful regexs.
+	- The Textrank keywords for each email are calculated using PageRank.
+
+### (2) Feature Extraction:
+
+	- From the cleaned email text we create a 'bag of words' matrix.
+	- From the 'bag of words' we compute the TF-IDF matrix (520,901 emails X TODO words)
+
+### (3) Topic Modelling/Extraction:
+
+	- We run MNF / LDA / LSA to obtain the fitted vector model (num_components X num_features).
+	- We output the highest weighted words for the vector components as preliminary results.
+
+### (4) Topic Clustering:
+
+	- We transform the dimensionality reduction component vectors to new feature matrices (520,901 emails X num_components).
+	- We run MS / SP / AF on the dimensionality reduced feature matrix to obtain cluster labels.
+	- We obtain human understandable word labels for cluster centroids by extracting the most frequently occurring TextRank 
+		keywords from the member emails.

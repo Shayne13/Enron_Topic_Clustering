@@ -2,7 +2,7 @@
 # Module: topicmodels
 # To call from the command line, run `python src/topicmodels <dr_model> <cluster_model>`.
 # <dr_model> can be one of 'mnf', 'lda', 'lsa' or 'all'.
-# <cluster_model> can be one of 'ms', 'sp', 'af' or 'all'.
+# <cluster_model> can be one of 'ms', 'sp', 'af', 'ag' or 'all'.
 
 import sys, os, re, operator, string
 import numpy as np
@@ -13,11 +13,22 @@ from Textrank.Units import EmailUnit, SentenceUnit
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import NMF, LatentDirichletAllocation, TruncatedSVD
-from sklearn.cluster import spectral_clustering, AffinityPropagation, MeanShift
+from sklearn.cluster import spectral_clustering, AffinityPropagation, MeanShift, AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
 # from sklearn.decomposition import PCA
 # from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 
+# --------------------------------------------
+# Alter these accordingly:
+
+num_clusters = 60
+num_dr_components = 100
+
+emails_source_file = 'Data/small_emails.txt'
+feature_labels_source_file = 'Data/small_feature_labels.txt'
+x_tfidf_source_file = 'Data/small_X_tfidf.matrix'
+
+# --------------------------------------------
 
 def dr_stage(abbrev, X_tfidf, featureNames):
 	dr_models = {}
@@ -70,7 +81,13 @@ def clustering_stage(abbrev, dr_name, X, emails):
 	elif abbrev == 'af':
 
 		name = dr_name + '  -->  Affinity Propagation'
-		labels, cluster_centers, numClusters = clusterEmails('sp', X)
+		labels, cluster_centers, numClusters = clusterEmails('af', X)
+		print_cluster_info(name, labels, numClusters, emails)
+
+	elif abbrev == 'ag':
+
+		name = dr_name + '  -->  Agglomerative Clustering'
+		labels, cluster_centers, numClusters = clusterEmails('ag', X)
 		print_cluster_info(name, labels, numClusters, emails)
 
 	elif abbrev == 'all':
@@ -78,14 +95,17 @@ def clustering_stage(abbrev, dr_name, X, emails):
 		name1 = dr_name + '  -->  Mean Shift'
 		name2 = dr_name + '  -->  Spectral Clustering'
 		name3 = dr_name + '  -->  Affinity Propagation'
+		name4 = dr_name + '  -->  Agglomerative Clustering'
 
 		labels1, cluster_centers1, numClusters1 = clusterEmails('ms', X)
 		labels2, cluster_centers2, numClusters2 = clusterEmails('sp', X)
 		labels3, cluster_centers3, numClusters3 = clusterEmails('af', X)
+		labels4, cluster_centers4, numClusters4 = clusterEmails('ag', X)
 
-		print_cluster_info(name1, labels1, numClusters1, emails1)
-		print_cluster_info(name2, labels2, numClusters2, emails2)
-		print_cluster_info(name3, labels3, numClusters3, emails3)
+		print_cluster_info(name1, labels1, numClusters1, emails)
+		print_cluster_info(name2, labels2, numClusters2, emails)
+		print_cluster_info(name3, labels3, numClusters3, emails)
+		print_cluster_info(name4, labels4, numClusters4, emails)
 
 	else:
 		print '%s is not a valid cluster model'
@@ -95,29 +115,29 @@ def clustering_stage(abbrev, dr_name, X, emails):
 def mnf_model(X_tfidf, featureNames):
 	name ='Non-Negative Matrix Factorization'
 	timing = Timer(name)
-	MNF_topics = dimensionalityReduction(name, X_tfidf, 100)
-	print_top_words('MNF', MNF_topics, featureNames, 10)
+	MNF_topics = dimensionalityReduction('mnf', X_tfidf, num_dr_components)
+	print_top_words(name, MNF_topics, featureNames, 10)
 	x_mnf = MNF_topics.transform(X_tfidf)
 	timing.finish()
-	return x_mnf
+	return name, x_mnf
 
 def lda_model(X_tfidf, featureNames):
 	name = 'Latent Dirichlet Allocation'
 	timing = Timer(name)
-	LDA_topics = dimensionalityReduction(name, X_tfidf, 100)
-	print_top_words('LDA', LDA_topics, featureNames, 10)
+	LDA_topics = dimensionalityReduction('lda', X_tfidf, num_dr_components)
+	print_top_words(name, LDA_topics, featureNames, 10)
 	x_lda = LDA_topics.transform(X_tfidf)
 	timing.finish()
-	return x_lda
+	return name, x_lda
 
 def lsa_model(X_tfidf, featureNames):
 	name = 'Latent Semantic Analysis'
 	timing = Timer(name)
-	LSA_topics = dimensionalityReduction(name, X_tfidf, 100)
-	print_top_words('LSA', LSA_topics, featureNames, 10)
+	LSA_topics = dimensionalityReduction('lsa', X_tfidf, num_dr_components)
+	print_top_words(name, LSA_topics, featureNames, 10)
 	x_lsa = LSA_topics.transform(X_tfidf)
 	timing.finish()
-	return x_lsa
+	return name, x_lsa
 
 # Pass in 'mnf', 'lda' or 'lsa' as the modelType, the features X,
 # the feature names and the number of desired components.
@@ -125,13 +145,14 @@ def lsa_model(X_tfidf, featureNames):
 def dimensionalityReduction(modelType, X, nComponents):
     
     if modelType == 'mnf':
-        model = NMF(n_components=nComponents, init='random', random_state=0)
+        return NMF(n_components=nComponents, init='random', random_state=0).fit(X)
     elif modelType == 'lda':
-        model = LatentDirichletAllocation(n_topics=nComponents)
+        return LatentDirichletAllocation(n_topics=nComponents).fit(X)
     elif modelType == 'lsa':
-        model = TruncatedSVD(n_components=nComponents)
+        return TruncatedSVD(n_components=nComponents).fit(X)
         
-    return model.fit(X)
+    print 'Invalid dimensionality reduction model'
+    return None
 
 
 # Pass in 'ms', 'spectral' or 'affinity' as the modelType, the features X
@@ -144,13 +165,16 @@ def clusterEmails(modelType, X, nClusters=100):
         return ms.labels_, ms.cluster_centers_, len(ms.cluster_centers_)
     elif modelType == 'sp':
         symmetricMat = cosine_similarity(X[0:X.shape[0]], X)
-        labels = spectral_clustering(symmetricMat, n_clusters=nClusters)
+        labels = spectral_clustering(symmetricMat, n_clusters=num_clusters)
         return labels, None, nClusters
     elif modelType == 'af':
         af = AffinityPropagation().fit(X)
         return  af.labels_, af.cluster_centers_, len(af.cluster_centers_)
+    elif modelType == 'ag':
+    	ag = AgglomerativeClustering(n_clusters=num_clusters).fit(X)
+    	return ag.labels_, ag.cluster_centers_, len(ag.cluster_centers_)
 
-    print 'Invalid modelType argument'
+    print 'Invalid cluster model argument'
     return None
 
 # Print out the top words for the topic model:
@@ -200,24 +224,24 @@ def getClusterDistribution(labels):
 
 if __name__ == '__main__':
 
-	dr_model = str(sys.argv[1])
-	cluster_model = str(sys.argv[2])
+	dr_model = str(sys.argv[1]).lower()
+	cluster_model = str(sys.argv[2]).lower()
 
-    timer = Timer('Topic Modelling')
+	timer = Timer('Topic Modelling')
 
-    emails = pickler.load('Data/emails.txt')
-    featureNames = pickler.load('Data/feature_labels.txt')
-    X_tfidf = pickler.load('Data/X_tfidf.matrix')
-    print X_tfidf.shape
+	emails = pickler.load(emails_source_file)
+	featureNames = pickler.load(feature_labels_source_file)
+	X_tfidf = pickler.load(x_tfidf_source_file)
+	print X_tfidf.shape
 
-    timer.markEvent('Loaded email feature data')
+	timer.markEvent('Loaded email feature data')
 
-    X_dr = dr_stage(dr_model, X_tfidf, featureNames)
+	X_dr = dr_stage(dr_model, X_tfidf, featureNames)
 
-    timer.markEvent('Finished dimensionality reduction step')
-    print 'Starting Topic Clustering'
+	timer.markEvent('Finished dimensionality reduction step')
+	print 'Starting Topic Clustering'
 
-    for dr_name, X in X_dr:
-    	clustering_stage(cluster_model, dr_name, X, emails)
+	for dr_name in X_dr.keys():
+		clustering_stage(cluster_model, dr_name, X_dr[dr_name], emails)
 
-    timer.finish()
+	timer.finish()

@@ -1,0 +1,202 @@
+*************************************************
+TOPIC MODEL: Latent Semantic Analysis with 100 components
+*************************************************
+Topic 0:   detected variances txt schedules schedule preferred final details hour found
+
+Topic 1:   thanks please com deal know let re questions enron call
+
+Topic 2:   description detailed date oncall lynn duration terry buchanan vacation days
+
+Topic 3:   com enron http www email net click mail xls hotmail
+
+Topic 4:   xls hpl hpln attached file see nom noms feb jan
+
+Topic 5:   thanks com enron xls hpln hpl file http lynn description
+
+Topic 6:   deal meter daren com sitara enron flow volume jackie ticket
+
+Topic 7:   schedule preferred final details hour found deal load tblloads variance
+
+Topic 8:   report credit deal thanks expense new order weekly power total
+
+Topic 9:   re new power sally hey john thanks would get good
+
+Topic 10:   re know let report credit questions please thank enron com
+
+Topic 11:   thank re deal datek order support thanks mail online phillip
+
+Topic 12:   call questions please re attached contact deal mail order see
+
+Topic 13:   order datek online know let mail support re delivery receive
+
+Topic 14:   information mail hq please oh copy message address intended posting
+
+Topic 15:   hpl daren bob day meter gas mmbtu dth volumes per
+
+Topic 16:   john hey gas chris contract buchanan intended blackberry recipient fax
+
+Topic 17:   john order datek sally blackberry online daren support time hpl
+
+Topic 18:   blackberry hpl www handheld wireless net sent http call rick
+
+Topic 19:   blackberry hpln day www daren handheld wireless attached dth net
+
+Topic 20:   hq oh posting following website official address copy found call
+
+Topic 21:   fax day hpln phone houston call dth th texas sally
+
+Topic 22:   new fax bob daren phone houston power deals texas sitara
+
+Topic 23:   daren bob call hpln meter may intended recipient farmer get
+
+Topic 24:   sally questions regards day contract congratulations intended dth recipient beck
+
+Topic 25:   rick regards phillip enron buy cc lynn gas bob questions
+
+Topic 26:   attached see com http df hour hey fax deal would
+
+Topic 27:   phillip sally jeff hour request bob lucy final preferred details
+
+Topic 28:   schedule phillip attached see found new jeff bob com sc
+
+Topic 29:   phillip new rick th day power hour regards jeff http
+
+Topic 30:   hey chris pager sitara backout deals see rick attached outage
+
+Topic 31:   hey rick meter new daren click http email call day
+
+Topic 32:   http pager backout rick sitara www schedule outage on help
+
+Topic 33:   hey bob meeting http questions rick th deals carr futures
+
+Topic 34:   hey regards attached backout pager th enron blackberry contact outage
+
+Topic 35:   regards please meeting chris meter contract best capacity storage com
+
+Topic 36:   regards lynn th chris fw cc best questions click bob
+
+Topic 37:   lynn sally meter meeting gas carr futures hey capacity cc
+
+Topic 38:   lynn deals hey fw cc meter day blair new need
+
+Topic 39:   th meter deals contract df sally capacity susan rick storage
+
+Topic 40:   deals carr enron futures herein new contained charts call hot
+
+Topic 41:   chris th risk deals lynn fw trading business need management
+
+Topic 42:   chris new questions jeff df http comments contract daren meter
+
+Topic 43:   redeliveries fuels cotton valley enron http contract daren new time
+
+Topic 44:   meter gas meeting sitara regards enron http flow month week
+
+Topic 45:   questions deals daren jeff meeting comments contact time phone fw
+
+Topic 46:   fw redeliveries fuels cotton valley chris meter df hpln bob
+
+Topic 47:   deals df chris http susan call request meeting doc daren
+
+Topic 48:   fw enron jpg houston texas fuel http day email trading
+
+Topic 49:   request contract call number fw attached meeting see new phone
+
+Topic 50:   list phone enron df meeting th doc deals cell office
+
+Topic 51:   phone time enron number please cell fw following susan home
+
+Topic 52:   change list volumes doc month report volume demand daily changes
+
+Topic 53:   week email risk next time office fax trading received phone
+
+Topic 54:   week list next office january last susan dth need houston
+
+Topic 55:   time credit list df legal doc susan referenced copies pm
+
+Topic 56:   sitara jackie request list jeff gas th meeting ticket doc
+
+Topic 57:   doc time email report dth capacity file sitara feedback jeff
+
+Topic 58:   jeff time request dth price meter df bob click get
+
+Topic 59:   jeff doc information week need credit file next please july
+
+Topic 60:   jeff capacity list call would change volume request scott houston
+
+Topic 61:   doc week request dth would deals file storage time next
+
+Topic 62:   capacity susan scott demand desk questions meter meeting need regulated
+
+Topic 63:   susan contract doc gas help jeff month november desk friday
+
+Topic 64:   office contract doc regulated need time companies report brenda contracts
+
+Topic 65:   susan november doug fax feedback ph kinney regulated october storage
+
+Topic 66:   office gas capacity july work desk doc hi june storage
+
+Topic 67:   susan january dth would volumes office scott like time information
+
+Topic 68:   time june dth regulated gas phone companies buy change feedback
+
+Topic 69:   storage price jan volume hi dec houston buy help work
+
+Topic 70:   january july june get dth volumes steve per done following
+
+Topic 71:   storage lunch july june information demand price numbers risk df
+
+Topic 72:   work storage steve done deals load january congratulations list flow
+
+Topic 73:   done jackie dec power get demand jan storage office susan
+
+Topic 74:   price get today meter steve office work sitara comments th
+
+Topic 75:   month july data june fuel steve price time office numbers
+
+Topic 76:   steve october price volume numbers lunch number questions jackie make
+
+Topic 77:   work lunch need volume price contract deals fax final susan
+
+Topic 78:   steve january details final power number risk transport preferred schedules
+
+Topic 79:   lunch hi steve storage data susan done meter scott company
+
+Topic 80:   work volumes lunch numbers power load desk steve feedback sitara
+
+Topic 81:   steve demand help need month november comments yo storage october
+
+Topic 82:   help volume desk jackie january june lunch done susan july
+
+Topic 83:   lunch help january change month days storage december us transport
+
+Topic 84:   jan message comments lunch feb forward cc look help toute
+
+Topic 85:   congratulations january look july promotion jan forward done gas june
+
+Topic 86:   december number jan yo good power following dth today weekend
+
+Topic 87:   month storage nom june bill july need good one lc
+
+Topic 88:   number month comments scott transport mmbtu volume forward look team
+
+Topic 89:   month trades volume congratulations sc get changes lunch comments well
+
+Topic 90:   message get help us october information change meeting contract toute
+
+Topic 91:   changes storage data cc get october system following make friday
+
+Topic 92:   number work congratulations following october volumes email susan transport one
+
+Topic 93:   cc done btu november nom number one today agree work
+
+Topic 94:   today transport forward june trades sc vacation dth tx click
+
+Topic 95:   yo flow trades sc following nom days transport month patti
+
+Topic 96:   cc pm bill power group done following book month jeff
+
+Topic 97:   team email scott update today ok change data help larry
+
+Topic 98:   btu jpg feb want jan agree larry days team power
+
+Topic 99:   update good cc weekend email trades sc forward look take

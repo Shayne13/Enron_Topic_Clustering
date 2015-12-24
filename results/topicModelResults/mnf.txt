@@ -1,0 +1,202 @@
+*************************************************
+TOPIC MODEL: Non-Negative Matrix Factorization with 100 components
+*************************************************
+Topic 0:   gas natural fuel pipeline plant flow us prices points point
+
+Topic 1:   order datek online support confirmation delivery electronic postal subscribed printed
+
+Topic 2:   enron com requested http corp ect rodriguez carlos gary tisdale
+
+Topic 3:   meter flow volumes clem meters cernosek extend activity days pops
+
+Topic 4:   carr futures herein contained charts hot carrfut solicitation respects differ
+
+Topic 5:   houston texas fuel louisiana suite direct tx supply fax bailey
+
+Topic 6:   meeting attend plan discuss pm thursday room tuesday conference staff
+
+Topic 7:   sally beck patti sheila hgm prc dear shona forward thompson
+
+Topic 8:   schedule found preferred details final detected variances holiday released revised
+
+Topic 9:   request name approval original resource per communications rc book system
+
+Topic 10:   jackie dec flow young cover volume extend days decatherms victor
+
+Topic 11:   need anything help else us make someone additional also sure
+
+Topic 12:   would like us could cost meet discuss interested appreciated around
+
+Topic 13:   com hotmail net aol org us gov yahoo edu columbiaenergygroup
+
+Topic 14:   phone cell number home fax name tx contact pager bailey
+
+Topic 15:   new power york role product old products number create congratulating
+
+Topic 16:   report credit expense weekly legal copies expensexms distributed approval total
+
+Topic 17:   lunch friday dinner thursday brenda training bring yo provided pm
+
+Topic 18:   hi stacey heidi boyd afternoon karen vallejo guys harry darron
+
+Topic 19:   pager backout outage contact scheduled on outages purpose server unify
+
+Topic 20:   congratulations promotion well deserved congrats note nice vice president hope
+
+Topic 21:   please respond note advise make review forward following contact attend
+
+Topic 22:   txt schedules detected variances preferred empty found table matches locate
+
+Topic 23:   xls file egmnom feb attached book wcreveff rentroll contains oct
+
+Topic 24:   rick buy fyi tx causey ted dietz lets dave skilling
+
+Topic 25:   click notes link vacation user view button document access migration
+
+Topic 26:   week next last weeks wr watch early rb thursday pick
+
+Topic 27:   regulated companies buy referenced products services california utility quality continue
+
+Topic 28:   cc blair bill david raetta frank dave robert larry sheila
+
+Topic 29:   call conference give code free discuss number tomorrow dial feel
+
+Topic 30:   jeff comments patricia distribution contact skilling ken best lay cnnfn
+
+Topic 31:   day mmbtu per daily days great oct lee every february
+
+Topic 32:   month last rate production first days end well data sent
+
+Topic 33:   price fixed correct volume buy market term pricing info prices
+
+Topic 34:   hq oh posting website copy official address following mail found
+
+Topic 35:   hey guys dad later buddy rob dinner much melba effect
+
+Topic 36:   deal extend extended ticket purchase expired volume sale tickets katherine
+
+Topic 37:   thanks help kim bill rob darren brenda patti kathy advance
+
+Topic 38:   re yes dinner peoples lc respond ncaa dad picks vacation
+
+Topic 39:   intended recipient may message confidential sender contain use privileged mail
+
+Topic 40:   load table variance tblloads variances detected hour found low preferred
+
+Topic 41:   hpln xls file attached see nom february noms txu fuel
+
+Topic 42:   attached see file pdf notices memo orders letter document spreadsheet
+
+Topic 43:   btu agree nomination nom tu rate jones utilities larry flow
+
+Topic 44:   lynn blair oncall terry buchanan randy raetta vacation kowalke larry
+
+Topic 45:   office cell brenda back chairman london meet site resources human
+
+Topic 46:   information data additional and or provide number communications person communication
+
+Topic 47:   description detailed date oncall duration terry days buchanan vacation prc
+
+Topic 48:   time real pm date location system hours period full place
+
+Topic 49:   yahoo breaking news click say ronniegiron snake fwd cnn http
+
+Topic 50:   today charts later tomorrow meet zdnetonebox place sign back counterparties
+
+Topic 51:   trades sc detected variances schedule trade hour recap draft vote
+
+Topic 52:   contract storage contracts term transco brenda transportation evergreen type cove
+
+Topic 53:   susan scott bailey expense cordially ok lindberg trevino texas approve
+
+Topic 54:   november october december tuesday friday pm wednesday saturday thursday september
+
+Topic 55:   phillip lucy jacques rentroll larry brenda tim hunter fine jim
+
+Topic 56:   email requested approver received security listed click williams wes address
+
+Topic 57:   http www com html asp htm web site visit index
+
+Topic 58:   dth per joann columbiaenergygroup total pool txu volumes revised sold
+
+Topic 59:   john buchanan oncall singer lavorato liz production louise jim hello
+
+Topic 60:   fax ph doug tel kinney suite columbiaenergygroup version mgermany chm
+
+Topic 61:   july june friday vacation nominations bought production afternoon pm st
+
+Topic 62:   change volumes changes volume daily computed of the sheet nom
+
+Topic 63:   hpl xls nom sept noms see txu nomination mmbtu september
+
+Topic 64:   br tr sportsline td font href cgi links width reports
+
+Topic 65:   brian hoskins mobile net dinner tina blakely fangming enron thanksgiving
+
+Topic 66:   capacity transport rate tco scott release pipeline tw nov delivery
+
+Topic 67:   thank yvette cooperation support participation much attend patience assistance class
+
+Topic 68:   risk trading business management operations global reporting group controls activities
+
+Topic 69:   chris scott sebesta sg doug total germany production released wire
+
+Topic 70:   work home product hard michelle client privileges hollis attorney protected
+
+Topic 71:   january flow february december thursday tuesday weather contracts due friday
+
+Topic 72:   questions comments contact concerns patricia feel distribution robert weekly free
+
+Topic 73:   know let think whether else anything tomorrow make thoughts attend
+
+Topic 74:   regards best shona rob kind karen dear nancy delainey doorstep
+
+Topic 75:   steve effective harris help beverly kean rodgers dave revision bev
+
+Topic 76:   df pls print comments drew tw draft ok tony memo
+
+Topic 77:   demand done charge fee transport brenda charges fletcher fuel contracts
+
+Topic 78:   game tonight make play try fantasy season yards sunday saturday
+
+Topic 79:   doc file update resume letter comments training esource natural ng
+
+Topic 80:   team members help ou teams support ut lexi building tw
+
+Topic 81:   desk west book help texas parking transportation central trading books
+
+Topic 82:   jpg priceless holiday home file topock hotmail christmas sched messaging
+
+Topic 83:   redeliveries fuels cotton valley nomination carthage notified pricing follows well
+
+Topic 84:   feedback process review option participation performance london important prc completed
+
+Topic 85:   daren farmer thu julie ticket talk clem pat fred nom
+
+Topic 86:   good going weekend one think go take look night great
+
+Topic 87:   blackberry handheld wireless sent net www buy schneider mail fyi
+
+Topic 88:   fw presentation santa christmas fwd frank cheers coing pictures fyi
+
+Topic 89:   sitara ticket production entered vance following created vlt tickets taylor
+
+Topic 90:   get back together chance try set us info able test
+
+Topic 91:   th nom ldc deadline st nd pm est friday pick
+
+Topic 92:   jan feb dec nov dave sep egmnom yo oct jul
+
+Topic 93:   deals following counterparty booked bookout missing transport sale singer physical
+
+Topic 94:   want go pick taylor jason trade round compaq bass computer
+
+Topic 95:   numbers code participant update dial number contact could sheet storage
+
+Topic 96:   preferred final details hour found detected variances happy tblloads variance
+
+Topic 97:   power state california market said energy company electricity utilities prices
+
+Topic 98:   bob vance vlt wellhead created taylor superty entered following withers
+
+Topic 99:   list send people mail address mailing lists name message command

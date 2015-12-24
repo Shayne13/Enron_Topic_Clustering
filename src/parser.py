@@ -28,8 +28,8 @@ def parse_all_email_accounts(rootpath):
     timer = Timer('to parse %d email accounts' % len(accountpaths))
     for i, accountpath in enumerate(accountpaths):
         allEmails += parseEmailAccount(accountpath)
-        print 'X'
-        if ((i+1) % 10) == 0:
+        print accountpath
+        if ((i+1) % 5) == 0:
             timer.markEvent('Parsed %d of %d accounts' % (i+1, len(accountpaths)))
 
     timer.finish()
@@ -56,7 +56,7 @@ def listdir_allsubpaths(path):
 
 # Takes in an emails file path and the account owner and returns the EmailUnit.
 def parseEmail(path, owner):
-    
+
     with open(path, 'r') as f:
         contents = [l for l in f]
         
@@ -67,9 +67,16 @@ def parseEmail(path, owner):
     textIndex = [i for i, l in enumerate(contents) if re.search('(X-FileName:)', l)][0] + 2
     
     # Extract Email metadata:
-    sender = re.search('(From:\s)([^\n]+)', contents[senderIndex]).group(2).strip()
-    recipient = re.search('(To:\s)([^\n]+)', contents[recipientIndex]).group(2).strip()
-    subject = re.search('(Subject:\s)([^\n]+)', contents[subjectIndex]).group(2).strip()
+    senderStr = re.search('(From:\s)([^\n]+)', contents[senderIndex])
+    recipientStr = re.search('(To:\s)([^\n]+)', contents[recipientIndex])
+    subjectStr = re.search('(Subject:\s)([^\n]+)', contents[subjectIndex])
+    sender = senderStr.group(2).strip() if senderStr != None else ""
+    recipient = recipientStr.group(2).strip() if recipientStr != None else ""
+    subject = subjectStr.group(2).strip() if subjectStr != None else ""
+
+    # sender = re.search('(From:\s)([^\n]+)', contents[senderIndex]).group(2).strip()
+    # recipient = re.search('(To:\s)([^\n]+)', contents[recipientIndex]).group(2).strip()
+    # subject = re.search('(Subject:\s)([^\n]+)', contents[subjectIndex]).group(2).strip()
     
     # Lines that match these regexes should be removed:
     removeRegex = compileRegex(['----------------------\sForwarded\sby',
@@ -167,7 +174,7 @@ if __name__ == '__main__':
     timer.markEvent('TF-IDF matrix constucted.')
 
     saveLocation = 'Data/'
-    pickler.save(emails, saveLocation + 'emails.txt')
-    pickler.save(featureNames, saveLocation + 'feature_labels.txt')
-    pickler.save(X_tfidf, saveLocation + 'x_tfidf.matrix')
+    pickler.save(emails, saveLocation + 'mini_emails.txt')
+    pickler.save(featureNames, saveLocation + 'mini_feature_labels.txt')
+    pickler.save(X_tfidf, saveLocation + 'mini_x_tfidf.matrix')
     timer.finish()

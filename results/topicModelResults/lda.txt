@@ -1,6 +1,7 @@
 *************************************************
 TOPIC MODEL: Latent Dirichlet Allocation with 100 components
 *************************************************
+
 Topic 0:   alarm wake couldnt carlisle proceeds another complex apartment close buy
 
 Topic 1:   prudency reviewer jp holbrook john magnitude complexity term put phillip

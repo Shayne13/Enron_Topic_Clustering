@@ -1,6 +1,7 @@
 *************************************************
 TOPIC MODEL: Latent Semantic Analysis with 100 components
 *************************************************
+
 Topic 0:   detected variances txt schedules schedule preferred final details hour found
 
 Topic 1:   thanks please com deal know let re questions enron call

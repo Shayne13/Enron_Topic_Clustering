@@ -1,6 +1,7 @@
 *************************************************
 TOPIC MODEL: Non-Negative Matrix Factorization with 100 components
 *************************************************
+
 Topic 0:   gas natural fuel pipeline plant flow us prices points point
 
 Topic 1:   order datek online support confirmation delivery electronic postal subscribed printed

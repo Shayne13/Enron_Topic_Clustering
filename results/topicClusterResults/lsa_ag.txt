@@ -1,0 +1,205 @@
+*********************************************
+TOPIC CLUSTER: Latent Semantic Analysis  -->  Agglomerative Clustering:  - generated 100 clusters -
+*********************************************
+Cluster Distribution: 
+[4262, 3226, 787, 556, 490, 471, 468, 417, 409, 408, 337, 312, 289, 263, 257, 249, 239, 237, 233, 232, 227, 224, 223, 201, 200, 193, 186, 185, 183, 180, 175, 170, 169, 168, 164, 162, 161, 160, 159, 156, 153, 153, 152, 151, 149, 145, 141, 140, 139, 138, 130, 129, 118, 117, 116, 116, 115, 114, 109, 105, 97, 96, 93, 90, 88, 87, 86, 86, 85, 84, 80, 78, 76, 71, 69, 66, 66, 65, 61, 60, 60, 57, 53, 51, 47, 47, 46, 46, 45, 45, 43, 43, 35, 34, 34, 33, 33, 29, 25, 23]
+
+Cluster 0: (249 emails)  	chris thanks deal deals programs happy accurate ll desk started
+
+Cluster 1: (185 emails)  	contract service rate thanks contracts k transco evergreen pathed written
+
+Cluster 2: (233 emails)  	dth deal day deals volume volumes let deliveries cayanosa know
+
+Cluster 3: (232 emails)  	jeff thanks quote let rick current interoffice work jon need
+
+Cluster 4: (490 emails)  	phone fax houston thanks number suite com new mail thank
+
+Cluster 5: (263 emails)  	capacity com gave recallable purple market like matched restriction secondary
+
+Cluster 6: (409 emails)  	day volumes lunch thanks pool volume tco appropriate clinton coh
+
+Cluster 7: (175 emails)  	john thanks devonian com information regards producer production mid curves
+
+Cluster 8: (139 emails)  	worksheet production john citygate producer producers confirm deals singer neal
+
+Cluster 9: (237 emails)  	new power thanks darla let attached week chris distribution storage
+
+Cluster 10: (159 emails)  	heidi dth thanks pool problem meter boyd hi volumes volume
+
+Cluster 11: (69 emails)  	deal transport deals use thanks storage volume confusing change
+
+Cluster 12: (71 emails)  	comments incorrect questions moved pat thanks
+
+Cluster 13: (145 emails)  	transport gas daily dedicated worksheet worksheets tco curve numbers usage
+
+Cluster 14: (787 emails)  	com enron click http www ect user ken ipayit e
+
+Cluster 15: (88 emails)  	deals deal new power said jeff volume np bookout comment
+
+Cluster 16: (223 emails)  	demand charge deal charges let contract contracts high coh transport
+
+Cluster 17: (408 emails)  	email com recipient message mail thanks intended littler e information
+
+Cluster 18: (152 emails)  	michelle enron work cash houston texas thanks privileges com employees
+
+Cluster 19: (289 emails)  	fw thanks info bucks people sandra ok jpg start exercising
+
+Cluster 20: (87 emails)  	sitara deal fts deals dayton bridgeline lamadrid beginning know agency
+
+Cluster 21: (96 emails)  	zone rate rates transactions stella clay tenn com williams sheets
+
+Cluster 22: (84 emails)  	peoples production pool month com customer local hi knows know
+
+Cluster 23: (130 emails)  	david details changes buy dated sign distribution included good identifying
+
+Cluster 24: (151 emails)  	fuel nat national demand gas dth trco transport contracts contract
+
+Cluster 25: (224 emails)  	storage contract contracts thanks month withdrawing withdrawals wsr rate number
+
+Cluster 26: (417 emails)  	phillip thank thanks buys plan guest west larry group developments
+
+Cluster 27: (169 emails)  	blackberry net fw price pricing thanks steve www lavo think
+
+Cluster 28: (66 emails)  	smith requested request goode barry diane approval approve requester com
+
+Cluster 29: (57 emails)  	kim copy john care cc
+
+Cluster 30: (97 emails)  	desk capacity west director trading tholt l plan p assoc
+
+Cluster 31: (115 emails)  	price deal capacity rhonda dth send prices priced deals close
+
+Cluster 32: (105 emails)  	office notes user shared mind rhonda near hit currently current
+
+Cluster 33: (114 emails)  	attached file later saturday want sent pie fw form timelines
+
+Cluster 34: (200 emails)  	thanks ok memo request actualized charge hr confidential
+
+Cluster 35: (556 emails)  	thanks know let judy chris handle need contract x discuss
+
+Cluster 36: (4262 emails)  	thanks employees new need time information com company contract employee
+
+Cluster 37: (76 emails)  	like yo later pm verifying kitchen send days dad family
+
+Cluster 38: (164 emails)  	doc file thanks questions save attached nominations nomination sweet requirements
+
+Cluster 39: (168 emails)  	doug kinney version daily storage changes estimates com ph injection
+
+Cluster 40: (180 emails)  	volume receipt capacity receipts start know day points deal dths
+
+Cluster 41: (156 emails)  	brenda deal fletcher thanks chris contract set h deals pre
+
+Cluster 42: (471 emails)  	rick need thanks buy know meeting lizzette regards enron help
+
+Cluster 43: (312 emails)  	regards thanks best analysis ogwb letter operating friday let based
+
+Cluster 44: (337 emails)  	deal deals thanks according navigator upstream ok price terms thank
+
+Cluster 45: (90 emails)  	january customer situations paulette billed com tn pm normal agent
+
+Cluster 46: (66 emails)  	month rate months work point quote billed price pricing breakdown
+
+Cluster 47: (93 emails)  	deals deal buy delivery january power sales darla
+
+Cluster 48: (86 emails)  	com enron changes columbiaenergygroup doug kinney change volumes daily volume
+
+Cluster 49: (117 emails)  	questions thanks delivery comments changed harris x ext report pfg
+
+Cluster 50: (153 emails)  	regulated companies services houston company leave tuesday hope quality energy
+
+Cluster 51: (43 emails)  	test
+
+Cluster 52: (227 emails)  	meeting attend meetings sent thanks hotel calp setup room discuss
+
+Cluster 53: (35 emails)  	thank
+
+Cluster 54: (149 emails)  	steve thanks date new updated update company decisions numbers manage
+
+Cluster 55: (186 emails)  	man old wonderfull year eh hey subscription home deals ankle
+
+Cluster 56: (80 emails)  	point cove storage said herman term contract counterparty brenda facility
+
+Cluster 57: (129 emails)  	thanks scott help transition weekend need books book booked free
+
+Cluster 58: (65 emails)  	trco rate k deal paying secondary priority stud mistakes contracts
+
+Cluster 59: (61 emails)  	
+
+Cluster 60: (116 emails)  	numbers thanks tweak retail daily wrong contract sheet joanie graphs
+
+Cluster 61: (45 emails)  	b c opt creek capacity delivery market timber deliveries cnr
+
+Cluster 62: (47 emails)  	rick
+
+Cluster 63: (153 emails)  	thanks
+
+Cluster 64: (23 emails)  	contracts
+
+Cluster 65: (468 emails)  	ogy dinner stage use best thanks need hye conchango leander
+
+Cluster 66: (161 emails)  	joann thanks gas dth thank like enron tco need weekends
+
+Cluster 67: (60 emails)  	th ldc dth day nom deadline noms columbiaenergygroup com st
+
+Cluster 68: (34 emails)  	coh deal com sst destephanis enron deals cover day thanks
+
+Cluster 69: (140 emails)  	st new deal space k differently total capacity following draft
+
+Cluster 70: (141 emails)  	com columbiaenergygroup thanks doug enron charles dth primary storage scott
+
+Cluster 71: (162 emails)  	intended thank recipient thanks mail message confidential contract sender estoppel
+
+Cluster 72: (239 emails)  	w attend beverly tuesday com conference change worksheet order location
+
+Cluster 73: (257 emails)  	com http www cera html home tx gif zdnet cgi
+
+Cluster 74: (60 emails)  	mgermany email camera info m payroll fax ch cell com
+
+Cluster 75: (33 emails)  	phillip
+
+Cluster 76: (33 emails)  	tetco
+
+Cluster 77: (201 emails)  	cc thanks lizzette company selling sherlyn robin fowler kulvinder neil
+
+Cluster 78: (25 emails)  	sandra dial deal thanks victor x chris check pathed path
+
+Cluster 79: (138 emails)  	com net enron aol williams hotmail mailto bakernet worldnet sempratrading
+
+Cluster 80: (118 emails)  	buy downgraded activity sale loose strong came ees patricia policy
+
+Cluster 81: (116 emails)  	transco program customers penn choice gas trunkline contracts contract deal
+
+Cluster 82: (46 emails)  	hey
+
+Cluster 83: (34 emails)  	report http risk total pool template status
+
+Cluster 84: (193 emails)  	lucy deposit fine rentroll chain file friday week follow apartment
+
+Cluster 85: (3226 emails)  	revision vacation photo cheese x wk funny message l task
+
+Cluster 86: (160 emails)  	thank thanks support major assisting original giving thing things problems
+
+Cluster 87: (85 emails)  	ruth sonat park concannon dave parked thanks deal cc dominion
+
+Cluster 88: (78 emails)  	hi philip catchup working display thanks stuff metal look sep
+
+Cluster 89: (45 emails)  	boo www town postings friday com chris job
+
+Cluster 90: (43 emails)  	th thanks st balance volume pay sell unify payments banked
+
+Cluster 91: (29 emails)  	volumes dth tennessee columbiaenergygroup changes
+
+Cluster 92: (86 emails)  	pricing confirm world priority thanks things looks rest fake rick
+
+Cluster 93: (183 emails)  	gas month points months point flow need secondary prices owner
+
+Cluster 94: (53 emails)  	yo
+
+Cluster 95: (51 emails)  	change changes volume volumes day days daily pricing prices gas
+
+Cluster 96: (109 emails)  	comments thursday pipelines reflected reflect com caps twanda returning transferred
+
+Cluster 97: (170 emails)  	week crap rest know fwd weeks come schedule slides thanks
+
+Cluster 98: (47 emails)  	enron com click new pipeline robertson notice company transwestern adr
+
+Cluster 99: (46 emails)  	nominations points gas nominated viewed view june customers december october

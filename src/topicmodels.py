@@ -24,9 +24,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 num_clusters = 60
 num_dr_components = 100
 
-emails_source_file = 'Data/small_emails.txt'
-feature_labels_source_file = 'Data/small_feature_labels.txt'
-x_tfidf_source_file = 'Data/small_X_tfidf.matrix'
+emails_source_file = 'Data/mini_emails.txt'
+feature_labels_source_file = 'Data/mini_feature_labels.txt'
+x_tfidf_source_file = 'Data/mini_X_tfidf.matrix'
 
 # --------------------------------------------
 
@@ -171,8 +171,8 @@ def clusterEmails(modelType, X, nClusters=100):
         af = AffinityPropagation().fit(X)
         return  af.labels_, af.cluster_centers_, len(af.cluster_centers_)
     elif modelType == 'ag':
-    	ag = AgglomerativeClustering(n_clusters=num_clusters).fit(X)
-    	return ag.labels_, ag.cluster_centers_, len(ag.cluster_centers_)
+    	ag = AgglomerativeClustering(n_clusters=nClusters).fit(X)
+    	return ag.labels_, None, nClusters
 
     print 'Invalid cluster model argument'
     return None

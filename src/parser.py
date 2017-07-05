@@ -174,7 +174,7 @@ if __name__ == '__main__':
     timer.markEvent('TF-IDF matrix constucted.')
 
     saveLocation = 'Data/'
-    pickler.save(emails, saveLocation + 'mini_emails.txt')
-    pickler.save(featureNames, saveLocation + 'mini_feature_labels.txt')
-    pickler.save(X_tfidf, saveLocation + 'mini_x_tfidf.matrix')
+    pickler.save(emails, saveLocation + 'emails.txt')
+    pickler.save(featureNames, saveLocation + 'feature_labels.txt')
+    pickler.save(X_tfidf, saveLocation + 'x_tfidf.matrix')
     timer.finish()
